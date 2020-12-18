@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Jul, 2019 2:58:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Enquiry" table="enquiry" catalog="helpdesk">
+        <id name="enqid" type="java.lang.Integer">
+            <column name="enqid" />
+            <generator class="identity" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="30" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="12" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="200" />
+        </property>
+        <property name="graduation" type="string">
+            <column name="graduation" length="50" />
+        </property>
+        <property name="yearofpass" type="java.lang.Integer">
+            <column name="yearofpass" />
+        </property>
+        <property name="internship" type="string">
+            <column name="internship" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

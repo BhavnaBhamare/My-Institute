@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Jul, 2019 2:58:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Fees" table="fees" catalog="helpdesk">
+        <id name="feeid" type="java.lang.Integer">
+            <column name="feeid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="admission" class="com.pojo.Admission" fetch="select">
+            <column name="admid" />
+        </many-to-one>
+        <property name="fname" type="string">
+            <column name="fname" length="30" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="30" not-null="true" />
+        </property>
+        <property name="totalfees" type="int">
+            <column name="totalfees" not-null="true" />
+        </property>
+        <property name="finst" type="int">
+            <column name="finst" not-null="true" />
+        </property>
+        <property name="fdate" type="string">
+            <column name="fdate" length="10" not-null="true" />
+        </property>
+        <property name="sinst" type="int">
+            <column name="sinst" not-null="true" />
+        </property>
+        <property name="sdate" type="string">
+            <column name="sdate" length="10" not-null="true" />
+        </property>
+        <property name="tinst" type="int">
+            <column name="tinst" not-null="true" />
+        </property>
+        <property name="tdate" type="string">
+            <column name="tdate" length="10" not-null="true" />
+        </property>
+        <property name="rbalance" type="int">
+            <column name="rbalance" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

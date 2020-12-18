@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Jul, 2019 2:58:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Grade" table="grade" catalog="helpdesk">
+        <id name="gid" type="java.lang.Integer">
+            <column name="gid" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="course" type="string">
+            <column name="course" length="20" />
+        </property>
+        <property name="tmarks" type="java.lang.Integer">
+            <column name="tmarks" />
+        </property>
+        <property name="omarks" type="java.lang.Integer">
+            <column name="omarks" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

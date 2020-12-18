@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Jul, 2019 2:58:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Admission" table="admission" catalog="helpdesk">
+        <id name="addid" type="int">
+            <column name="addid" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="30" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="30" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="12" not-null="true" />
+        </property>
+        <property name="internship" type="string">
+            <column name="internship" length="50" not-null="true" />
+        </property>
+        <property name="batchcode" type="string">
+            <column name="batchcode" length="20" not-null="true" />
+        </property>
+        <property name="batchtime" type="string">
+            <column name="batchtime" length="20" not-null="true" />
+        </property>
+        <property name="totalfees" type="int">
+            <column name="totalfees" not-null="true" />
+        </property>
+        <property name="finst" type="int">
+            <column name="finst" not-null="true" />
+        </property>
+        <property name="admdate" type="string">
+            <column name="admdate" length="10" not-null="true" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="200" not-null="true" />
+        </property>
+        <set name="feeses" table="fees" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="admid" />
+            </key>
+            <one-to-many class="com.pojo.Fees" />
+        </set>
+    </class>
+</hibernate-mapping>

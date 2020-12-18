@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Jul, 2019 2:58:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Register" table="register" catalog="helpdesk">
+        <id name="regid" type="java.lang.Integer">
+            <column name="regid" />
+            <generator class="identity" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="30" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="30" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="30" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="10" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="12" />
+        </property>
+    </class>
+</hibernate-mapping>
